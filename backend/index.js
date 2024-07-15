@@ -51,6 +51,9 @@ mongoose.connect(uri)
 app.get('/api', (req, res) => {
   res.json({ message: 'Hello from the backend!' });
 });
+app.get('/', (req, res) => {
+  res.json({ message: 'Hello from the backend!' });
+});
 app.use('/api/users', userRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/applications', applicationRoutes);

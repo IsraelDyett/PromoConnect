@@ -29,6 +29,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use(cors({
+  origin: ["https://deploy-mern-1whq.vercel.app"],
+  method: ["POST", "GET", "PATCH"],
+  cerdentials: true
+}));
 
 // Ensure the 'uploads' directory exists
 const fs = require('fs');

@@ -43,7 +43,7 @@ const ApplicationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(postId);
-    fetch(`http://localhost:5000/api/applications`, {
+    fetch(`https://promoconnect.onrender.com/api/applications`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

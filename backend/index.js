@@ -30,7 +30,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
-  origin: ["https://deploy-mern-1whq.vercel.app"],
+  origin: ["https://promo-connect-server.vercel.app/"],
   method: ["POST", "GET", "PATCH"],
   cerdentials: true
 }));

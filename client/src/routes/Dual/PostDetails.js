@@ -24,7 +24,7 @@ const PostDetails = () => {
 
   //console.log(userType);
   useEffect(() => {
-    fetch(`http://localhost:5000/api/posts/${postId}`, {
+    fetch(`https://promoconnect.onrender.com/api/posts/${postId}`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
@@ -48,7 +48,7 @@ const PostDetails = () => {
 
       if(userType==="Ambassador"){
         //Fetch applications for the current user
-        fetch(`http://localhost:5000/api/applications/user/${userId}`, {
+        fetch(`https://promoconnect.onrender.com/api/applications/user/${userId}`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }
@@ -108,7 +108,7 @@ const PostDetails = () => {
   const handleCommentSubmit = (postId, commentText) => {
     const userId = localStorage.getItem('userID');
     
-    fetch('http://localhost:5000/api/posts/comment', {
+    fetch('https://promoconnect.onrender.com/api/posts/comment', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -143,7 +143,7 @@ const PostDetails = () => {
   const handleLikePost = (postId) => {
     const userId = localStorage.getItem('userID');
     
-    fetch('http://localhost:5000/api/posts/like', {
+    fetch('https://promoconnect.onrender.com/api/posts/like', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

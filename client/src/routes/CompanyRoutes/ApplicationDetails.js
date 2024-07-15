@@ -12,7 +12,7 @@ const ApplicationDetails = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/applications/${applicationId}`, {
+    fetch(`https://promoconnect.onrender.com/api/applications/${applicationId}`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
@@ -34,7 +34,7 @@ const ApplicationDetails = () => {
 
   const updateStatus = (status) => {
     console.log(`Updating status to: ${status}`);
-    fetch(`http://localhost:5000/api/applications/${applicationId}/status`, {
+    fetch(`https://promoconnect.onrender.com/api/applications/${applicationId}/status`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

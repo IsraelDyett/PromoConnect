@@ -8,7 +8,7 @@ function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api')
+    fetch('https://promoconnect.onrender.com/api')
       .then((response) => response.json())
       .then((data) => setData(data.message));
   }, []);

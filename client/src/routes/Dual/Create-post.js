@@ -59,7 +59,7 @@ const CreatePost = ({ userType }) => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/posts', {
+      const response = await fetch('https://promoconnect.onrender.com/api/posts', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`

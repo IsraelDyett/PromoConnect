@@ -17,7 +17,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserAndPosts = async () => {
       try {
-        const userResponse = await fetch(`http://localhost:5000/api/users/${userId}`, {
+        const userResponse = await fetch(`https://promoconnect.onrender.com/api/users/${userId}`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }
@@ -29,7 +29,7 @@ const Profile = () => {
           setUser(userData);
         }
 
-        const postsResponse = await fetch(`http://localhost:5000/api/posts/user/${userId}`, {
+        const postsResponse = await fetch(`https://promoconnect.onrender.com/api/posts/user/${userId}`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }
@@ -73,7 +73,7 @@ const Profile = () => {
   const handleCommentSubmit = (postId, commentText) => {
     const userId = localStorage.getItem('userID');
     
-    fetch('http://localhost:5000/api/posts/comment', {
+    fetch('https://promoconnect.onrender.com/api/posts/comment', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ const Profile = () => {
   const handleLikePost = (postId) => {
     const userId = localStorage.getItem('userID');
     
-    fetch('http://localhost:5000/api/posts/like', {
+    fetch('https://promoconnect.onrender.com/api/posts/like', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

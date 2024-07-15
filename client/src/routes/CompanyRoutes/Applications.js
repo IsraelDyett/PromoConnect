@@ -12,7 +12,7 @@ const Applications = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/events/${postId}/applications`, {
+    fetch(`https://promoconnect.onrender.com/api/events/${postId}/applications`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }

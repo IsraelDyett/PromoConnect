@@ -10,7 +10,7 @@ const Register = () => {
     const onSubmit = async (data) => {
         try {
             // Send form data to backend for user registration
-            const response = await fetch('http://localhost:5000/api/users', {
+            const response = await fetch('https://promoconnect.onrender.com/api/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

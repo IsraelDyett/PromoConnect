@@ -27,7 +27,7 @@ const Login = () => {
         e.preventDefault();
         setErrorMessage('');
         setSuccessMessage('');
-        fetch('http://localhost:5000/api/users/login', {
+        fetch('https://promoconnect.onrender.com/api/users/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
